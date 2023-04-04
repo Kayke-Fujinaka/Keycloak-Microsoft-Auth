@@ -5,9 +5,7 @@ import { Navigate } from "react-router-dom";
 export const Painel = () => {
   const { keycloak } = useKeycloak();
 
-  if (!keycloak.authenticated) {
-    return <Navigate to="/" replace={true} />;
-  }
+  if (!keycloak.authenticated) return <Navigate to="/" replace={true} />;
 
   return (
     <div>

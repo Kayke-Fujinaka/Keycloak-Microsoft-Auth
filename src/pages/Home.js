@@ -5,9 +5,7 @@ import { Navigate } from "react-router-dom";
 export const Home = () => {
   const { keycloak } = useKeycloak();
 
-  if (keycloak.authenticated) {
-    return <Navigate to="/painel" replace={true} />;
-  }
+  if (keycloak.authenticated) return <Navigate to="/painel" replace={true} />;
 
   return (
     <div>
