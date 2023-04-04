@@ -4,40 +4,35 @@ import React from "react";
 export const Nav = () => {
   const { keycloak } = useKeycloak();
 
+  const handleButtonClick = () =>
+    keycloak.authenticated ? keycloak.logout() : keycloak.login();
+
   return (
     <div>
-      <div>
-        <section>
-          <nav>
+      <section>
+        <nav>
+          <div>
+            <h1>PeerBR - React Auth with Keycloak.</h1>
+            <ul>
+              <li>
+                <a href="/">Home</a>
+              </li>
+              <li>
+                <a href="/painel">Painel</a>
+              </li>
+            </ul>
             <div>
-              <h1>PeerBR - React Auth with Keycloak.</h1>
-              <ul>
-                <li>
-                  <a href="/">Home</a>
-                </li>
-                <li>
-                  <a href="/painel">Painel</a>
-                </li>
-              </ul>
               <div>
-                <div>
-                  {!keycloak.authenticated && (
-                    <button type="button" onClick={() => keycloak.login()}>
-                      Login
-                    </button>
-                  )}
-
-                  {!!keycloak.authenticated && (
-                    <button type="button" onClick={() => keycloak.logout()}>
-                      Logout ({keycloak.tokenParsed.preferred_username})
-                    </button>
-                  )}
-                </div>
+                <button type="button" onClick={handleButtonClick}>
+                  {keycloak.authenticated
+                    ? `Logout (${keycloak.tokenParsed.preferred_username})`
+                    : "Login"}
+                </button>
               </div>
             </div>
-          </nav>
-        </section>
-      </div>
+          </div>
+        </nav>
+      </section>
     </div>
   );
 };
