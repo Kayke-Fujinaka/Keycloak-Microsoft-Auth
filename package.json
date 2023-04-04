@@ -5,18 +5,19 @@
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",
   "scripts": {
-    "start": "react-scripts start"
+    "start": "node suppress-source-map-warnings.js && react-scripts start"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@react-keycloak/core": "^3.2.0",
     "@react-keycloak/web": "^3.4.0",
     "keycloak-js": "^21.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
-    "react-router-dom": "^6.10.0"
+    "react-router-dom": "^6.10.0",
+    "react-scripts": "5.0.1"
   },
   "browserslist": {
     "production": [
