@@ -7,7 +7,7 @@ import { keycloak } from "./services";
 
 function App() {
   return (
-    <div>
+    <>
       <ReactKeycloakProvider authClient={keycloak}>
         <Nav />
         <BrowserRouter>
@@ -17,7 +17,7 @@ function App() {
           </Routes>
         </BrowserRouter>
       </ReactKeycloakProvider>
-    </div>
+    </>
   );
 }
 
