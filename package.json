@@ -5,7 +5,7 @@
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",
   "scripts": {
-    "start": "node suppress-source-map-warnings.js && react-scripts start"
+    "start": "node src/utils/suppress-source-map-warnings.js && react-scripts start"
   },
   "keywords": [],
   "author": "",
