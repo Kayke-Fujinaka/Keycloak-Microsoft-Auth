@@ -2,7 +2,7 @@ import { useKeycloak } from "@react-keycloak/web";
 import React from "react";
 import { Navigate } from "react-router-dom";
 
-const Painel = () => {
+export const Painel = () => {
   const { keycloak } = useKeycloak();
 
   if (!keycloak.authenticated) {
@@ -15,5 +15,3 @@ const Painel = () => {
     </div>
   );
 };
-
-export default Painel;

@@ -2,7 +2,7 @@ import { useKeycloak } from "@react-keycloak/web";
 import React from "react";
 import { Navigate } from "react-router-dom";
 
-const Home = () => {
+export const Home = () => {
   const { keycloak } = useKeycloak();
 
   if (keycloak.authenticated) {
@@ -15,5 +15,3 @@ const Home = () => {
     </div>
   );
 };
-
-export default Home;

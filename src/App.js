@@ -1,10 +1,9 @@
 import { ReactKeycloakProvider } from "@react-keycloak/web";
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Nav from "./components/Nav";
-import Home from "./pages/Homepage";
-import Painel from "./pages/Painelpage";
-import keycloak from "./services/Keycloak";
+import { Nav } from "./components";
+import { Home, Painel } from "./pages";
+import { keycloak } from "./services";
 
 function App() {
   return (

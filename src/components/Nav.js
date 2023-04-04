@@ -1,7 +1,7 @@
 import { useKeycloak } from "@react-keycloak/web";
 import React from "react";
 
-const Nav = () => {
+export const Nav = () => {
   const { keycloak } = useKeycloak();
 
   return (
@@ -41,5 +41,3 @@ const Nav = () => {
     </div>
   );
 };
-
-export default Nav;
