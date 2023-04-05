@@ -10,6 +10,7 @@
 
 # production
 /build
+keycloak.http
 
 # misc
 .DS_Store
